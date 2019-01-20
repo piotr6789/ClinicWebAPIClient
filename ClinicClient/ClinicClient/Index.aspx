@@ -8,6 +8,8 @@
     <script src="Scripts/jquery-3.3.1.min.js"></script>
     <script src="Scripts/bootstrap.js"></script>
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/style.css" rel="stylesheet" />
+
     <title>ClientClinic</title>
 </head>
 <body>
@@ -16,15 +18,15 @@
             <tr>
                 <th v-for="item in ['ID', 'Name', 'DoctorID']">{{ item }}</th>
             </tr>
-            <tr v-for="item in data">
-                <td>{{ item.id }} </td>
-                <td>{{ item.name }} </td>
-                <td>{{ item.doctor.id }} </td>
+            <tr v-for="item in data" @click="rowClick(item)">
+                <td id="rowID">{{ item.id }} </td>
+                <td id="rowName">{{ item.name }} </td>
+                <td id="DoctorID">{{ item.doctorId }} </td>
             </tr>
         </table>
 
-        <input type="text" class="form-control" placeholder="Name">
-        <input type="text" class="form-control" placeholder="DoctorID">
+        <input type="text" class="form-control" placeholder="Name" v-model="selectedName" />
+        <input type="text" class="form-control" placeholder="DoctorID" v-model="selectedDoctorID" />
 
 
         <button type="btn" class="btn btn-success" v-on:click="addClick">Add</button>
