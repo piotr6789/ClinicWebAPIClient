@@ -60,6 +60,5 @@
                 self.data = result;
             }
         });
-        
     }
 })

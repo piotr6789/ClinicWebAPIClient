@@ -13,7 +13,7 @@
     <title>ClientClinic</title>
 </head>
 <body>
-    <div id="app" style="padding: 5px;">
+    <div id="app" style="padding: 50px;">
         <table class="table table-bordered">
             <tr>
                 <th v-for="item in ['ID', 'Name', 'DoctorID']">{{ item }}</th>
@@ -25,13 +25,19 @@
             </tr>
         </table>
 
-        <input type="text" class="form-control" placeholder="Name" v-model="selectedName" />
-        <input type="text" class="form-control" placeholder="DoctorID" v-model="selectedDoctorID" />
-
-
-        <button type="btn" class="btn btn-success" v-on:click="addClick">Add</button>
-        <button type="btn" class="btn btn-danger">Delete</button>
-        <button type="btn" class="btn btn-warning">Change</button>
+        <form>
+            <input type="text" class="form-control form-group col-lg-2 float-right" value="number of records" readonly/>
+            <input type="text" class="form-control form-group col-lg-2" placeholder="Name" v-model="selectedName" />
+            <input type="text" class="form-control form-group col-lg-2" placeholder="DoctorID" v-model="selectedDoctorID" />
+        </form>
+        <form>
+            <button type="btn" class="btn btn-secondary btn-lg float-right">Next Table</button>
+            <button type="btn" class="btn btn-success" v-on:click="addClick">Add</button>
+            <button type="btn" class="btn btn-danger">Delete</button>
+            <button type="btn" class="btn btn-warning">Change</button>
+            <button type="btn" class="btn btn-primary">Prev</button>
+            <button type="btn" class="btn btn-info">Next</button>
+        </form>
     </div>
 </body>
 
