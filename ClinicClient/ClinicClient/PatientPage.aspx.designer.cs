@@ -10,6 +10,15 @@
 namespace ClinicClient {
     
     
-    public partial class Index {
+    public partial class PacientPage {
+        
+        /// <summary>
+        /// doctorPage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button doctorPage;
     }
 }
